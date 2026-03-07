@@ -7,7 +7,7 @@ export const getAllNotes = async (req, res) => {
         res.status(200).json(notes)
 
     } catch (error) {
-        console.error("Error in getAllNotes Controller", errror)
+        console.error("Error in getAllNotes Controller", error)
         res.status(500).json({ message: "Internal server error" })
     }
 }
@@ -19,7 +19,7 @@ export const getSingleNote =async(req,res)=>{
 
         res.status(200).json(note);
     } catch (error) {
-        console.error("Error in getAllNotes Controller", errror)
+        console.error("Error in getAllNotes Controller", error)
         res.status(500).json("Internal Server Error ")
     }
 }
@@ -31,7 +31,7 @@ export const createNotes = async (req, res) => {
         const savedNote = await newNote.save();
         res.status(201).json(savedNote);
     } catch (error) {
-        console.error("Error in Created Controller", errror)
+        console.error("Error in Created Controller", error)
         res.status(500).json({ message: "Internal server error" })
     }
 }
@@ -50,7 +50,7 @@ export const updateNotes = async (req, res) => {
 
         res.status(200).json(updatedNote);
     } catch (error) {
-        console.error("Error in updated Controller", errror)
+        console.error("Error in updated Controller", error)
         res.status(500).json({ message: "Internal server error" })
     }
 }
@@ -69,7 +69,7 @@ export const deleteNotes = async(req, res) => {
 
         res.status(200).json(deleteNote);
     } catch (error) {
-        console.error("Error in Delete Controller", errror)
+        console.error("Error in Delete Controller", error)
         res.status(500).json({ message: "Internal server error" })
     }
 }
